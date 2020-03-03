@@ -1,0 +1,185 @@
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.recipes .image .outcover {
+    width: 100%;
+    height:240px;
+}
+.recipe {
+    padding: 10px;
+    border:1px solid #eee;
+}
+.myrepices-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+.myrecipe {
+    padding: 10px;
+    border:1px solid #eee;
+
+}
+.myrecipe img {
+    width: 100%;
+}
+h2 span {
+    color: #ddd;
+}
+
+h2 a{
+    color: #888;
+}
+
+h2{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 3rem;
+}
+
+.recipeContainer {
+    width: 70%;
+    margin:0 auto;
+}
+
+.recipeContainer .cover {
+    margin:  20px auto;
+    width: 95%;
+    height: 400px;
+    display: block;
+}
+.recipeContainer div :not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+.recipeContainer div{
+    margin-bottom: 20px;
+}
+
+.recipeContainer div p {
+    width: 90%;
+    margin: 20px auto;
+}
+.eyeDiseases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.eyeDiseases .image .outcover {
+    width: 100%;
+    height:240px;
+}
+.eyeDisease {
+    padding: 10px;
+    border:1px solid #eee;
+    background: white;
+}
+.eyeDisease .image a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.eyeDisease .meta{
+    text-align: center;
+}
+.eyeDiseaseContainer {
+    width: 70%;
+    margin:0 auto;
+
+}
+
+.eyeDiseaseContainer .cover {
+    margin:  20px auto;
+    width: 95%;
+    height: 400px;
+    display: block;
+}
+
+.eyeDiseaseContainer div p {
+    width: 90%;
+    margin: 20px auto;
+}
+.eyeDiseaseContainer div :not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+.eyeDiseaseContainer div{
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+form label{
+    font-size: 1.2rem;
+}
+
+.results{
+    width: 96%;
+}
+
+.modal-button {
+    border: 1px solid #1eb6a7;
+    border-radius: 5px;
+    background-color: white;
+    color: #1eb6a7;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+/*.modal-button a:hover {*/
+/*  border: 1px solid #1eb6a7;*/
+/*  border-radius: 5px;*/
+/*  background-color: #8edad3;*/
+/*  color: #fff;*/
+/*  !*padding: 5px 20px;*!*/
+/*  cursor: pointer;*/
+/*}*/
+
+h1, h2, h3, h4, h5, h6{
+    color: #1eb6a7;
+}
+
+.red-modal-button {
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: white;
+    color: red;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+#user-edit-button, #user-deletion-button{
+    border: none;
+    background: none;
+    color: #1eb6a7;
+    display:inline-block;
+}
+
+#article-deletion-button{
+    border: none;
+    background: none;
+    display:inline-block;
+}
+
+#user-edit-form, #user-deletion-form{
+    display:inline-block;
+}
+
+a {
+    color: #1eb6a7;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.utilities{
+    top: 25px; !important;
+}
