@@ -17,8 +17,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-
+<?php //dd(request()->path()); ?>
     @if(strpos(request()->path(), 'register') !== false || strpos(request()->path(), 'login') !== false)
+        <link rel="stylesheet" href="/css/register.css">
+        @elseif(request()->path() === '/')
+        <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/register.css">
     @else
         <link rel="stylesheet" href="/css/app.css">

@@ -150,8 +150,28 @@ h1 {
     background-size: cover;
 }
 
-.agileits-top {
-    padding: 3em;
+.agileits-top.agileits-top-welcome-screen {
+    padding: 6rem 8rem 8rem 8rem;
+}
+
+.links.links-welcome-screen{
+    text-align: center;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.links.links-welcome-screen:first-child{
+    padding-top: 8rem;
+}
+
+.links.links-welcome-screen > a {
+    /*text-align: justify;*/
+    color: #d8ffb4;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
@@ -559,11 +579,18 @@ input.checkbox:checked:after {
     .main-agileinfo {
         width: 36%;
     }
+
+    .main-agileinfo.main-agileinfo-welcome-screen {
+        width: 80%;
+    }
 }
 
 @media(max-width:1280px) {
     .main-agileinfo {
         width: 40%;
+    }
+    .main-agileinfo.main-agileinfo-welcome-screen {
+        width: 80%;
     }
 }
 
@@ -571,11 +598,17 @@ input.checkbox:checked:after {
     .main-agileinfo {
         width: 46%;
     }
+    .main-agileinfo.main-agileinfo-welcome-screen {
+        width: 80%;
+    }
 }
 
 @media(max-width:1024px) {
     .main-agileinfo {
         width: 49%;
+    }
+    .main-agileinfo.main-agileinfo-welcome-screen {
+        width: 80%;
     }
 }
 
@@ -593,6 +626,9 @@ input.checkbox:checked:after {
     .main-agileinfo {
         width: 58%;
     }
+    .main-agileinfo.main-agileinfo-welcome-screen {
+        width: 80%;
+    }
 
     input[type="text"], input[type="email"], input[type="password"] {
         width: 93%;
@@ -609,11 +645,17 @@ input.checkbox:checked:after {
     .main-agileinfo {
         width: 62%;
     }
+    .main-agileinfo.main-agileinfo-welcome-screen {
+        width: 80%;
+    }
 }
 
 @media(max-width:667px) {
     .main-agileinfo {
         width: 67%;
+    }
+    .main-agileinfo.main-agileinfo-welcome-screen {
+        width: 80%;
     }
 }
 
@@ -639,6 +681,9 @@ input.checkbox:checked:after {
 @media(max-width:568px) {
     .main-agileinfo {
         width: 75%;
+    }
+    .main-agileinfo.main-agileinfo-welcome-screen {
+        width: 80%;
     }
 
     .colorlibcopy-agile p {
