@@ -127,10 +127,10 @@ form label{
 }
 
 .modal-button {
-    border: 1px solid #1eb6a7;
+    border: 1px solid #527652;
     border-radius: 5px;
     background-color: white;
-    color: #1eb6a7;
+    color: #527652;
     padding: 5px 20px;
     cursor: pointer;
 }
@@ -145,7 +145,7 @@ form label{
 /*}*/
 
 h1, h2, h3, h4, h5, h6{
-    color: #1eb6a7;
+    color: #527652;
 }
 
 .red-modal-button {
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6{
 #user-edit-button, #user-deletion-button{
     border: none;
     background: none;
-    color: #1eb6a7;
+    color: #527652;
     display:inline-block;
 }
 
@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 a {
-    color: #1eb6a7;
+    color: #527652;
     text-decoration: none;
     background-color: transparent;
 }

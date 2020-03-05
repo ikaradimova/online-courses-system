@@ -6,11 +6,14 @@
         <div class="agileits-top">
             <h1 class="register-form-title">Login Form</h1>
             <form action="/company/login" method="post">
+                @if($errors->any())
+                    <div class="register-error">{{ implode('', $errors->all(':message')) }}</div>
+                @endif
                 @csrf
                 <input class="text email" type="email" name="email" placeholder="Email" required="">
-                @error('email') {{$message}} @enderror
+{{--                @error('email') {{$message}} @enderror--}}
                 <input class="text" type="password" name="password" placeholder="Password" required="">
-                @error('password') {{$message}} @enderror
+{{--                @error('password') {{$message}} @enderror--}}
                 <input type="submit" value="SIGNUP">
             </form>
             <p>Don't have an Account? <a href="/company/register"> Sign Now!</a></p>

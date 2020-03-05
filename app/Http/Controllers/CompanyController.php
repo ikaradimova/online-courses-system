@@ -132,7 +132,8 @@ class CompanyController extends Controller
         if(Auth::guard('company')->attempt(['email' => request('email'), 'password' => request('password')])){
             return redirect('/company/index');
         }
-        return 'wrong credentials';
+        return redirect()->back()->withErrors('Email or password not valid');
+//        return 'wrong credentials';
 //        $company = Company::select()->where('email', request('email'))->get();
 ////        var_dump($company->isEmpty());die;
 //        if($company->isEmpty()){

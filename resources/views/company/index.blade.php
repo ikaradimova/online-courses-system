@@ -85,14 +85,14 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <h1>{{$company['name']}}</h1>
+                        <h1 class="text-uppercase">{{$company['name']}}</h1>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <div class="" aria-labelledby="">
                             <a class="" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                Изход
+                                Exit
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
