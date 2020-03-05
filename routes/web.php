@@ -24,7 +24,8 @@ Route::view('/company/register',  'company.register');
 Route::post('/company/register', 'CompanyController@register');
 Route::view('/company/login',  'company.login');
 Route::post('/company/login', 'CompanyController@login');
-Route::view('/company/index', 'company.index');
+//Route::view('/company/index', 'company.index');
+Route::get('/company/index', 'CompanyController@index');
 
 //Route::get('/company/register', function () {
 //    return view('company.register');

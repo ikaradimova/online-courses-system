@@ -17,7 +17,11 @@ class CompanyController extends Controller
      */
     public function index()
     {
-
+//
+        $companyId = Auth::guard('company')->user()->id;
+        $company = Company::select()->where('id', $companyId)->get();
+        return view('company.index', ['company' => $company[0]]);
+//        dd($company);
     }
 
     /**
@@ -126,7 +130,7 @@ class CompanyController extends Controller
         );
 //        dd(Auth::guard('company')->attempt(['email' => request('email'), 'password' => request('password')]));
         if(Auth::guard('company')->attempt(['email' => request('email'), 'password' => request('password')])){
-            return 'login successful';
+            return redirect('/company/index');
         }
         return 'wrong credentials';
 //        $company = Company::select()->where('email', request('email'))->get();
@@ -136,5 +140,21 @@ class CompanyController extends Controller
 //        }
 //        return redirect('company/index');
 ////        var_dump($company);
+    }
+
+    public function positions(){
+
+    }
+
+    public function positionAdd(){
+
+    }
+
+    public function positionEdit(){
+
+    }
+
+    public function positionDelete(){
+
     }
 }
