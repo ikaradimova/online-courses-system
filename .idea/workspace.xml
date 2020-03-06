@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c31eb80-5b45-4b4b-9304-b6c3d4d9daf5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Employee.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/employee/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/employee/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/employee/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/online-courses-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/online-courses-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_060350_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_060350_create_employees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/position/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/position/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +169,7 @@
       <workItem from="1583343167424" duration="599000" />
       <workItem from="1583427127837" duration="17095000" />
       <workItem from="1583469796409" duration="5944000" />
-      <workItem from="1583511838943" duration="11481000" />
+      <workItem from="1583511838943" duration="12046000" />
     </task>
     <servers />
   </component>

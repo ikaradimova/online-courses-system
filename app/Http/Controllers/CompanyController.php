@@ -19,7 +19,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-//
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $company = Company::select()->where('id', $companyId)->get();
         return view('company.index', ['company' => $company[0]]);
@@ -146,6 +148,9 @@ class CompanyController extends Controller
     }
 
     public function positions(){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
 //        var_dump($companyId);die;
 //        $positions = Position::all();
@@ -160,12 +165,18 @@ class CompanyController extends Controller
     }
 
     public function positionCreate(){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $company = Company::select()->where('id', $companyId)->get();
         return view("position.add")->with('company', $company[0]);
     }
 
     public function positionAdd(){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $this->validate(
             request(), [
@@ -184,6 +195,9 @@ class CompanyController extends Controller
 
     public function positionEdit($id){
 //        dd($id);
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $company = Company::select()->where('id', $companyId)->get();
         $position = Position::find($id);
@@ -194,6 +208,9 @@ class CompanyController extends Controller
     }
 
     public function positionUpdate($id){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $this->validate(
             request(), [
@@ -210,6 +227,9 @@ class CompanyController extends Controller
     }
 
     public function positionDelete($id){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $position = Position::find($id);
         $position->delete();
@@ -220,6 +240,9 @@ class CompanyController extends Controller
      * --------------- EMPLOYEES -----------------
      */
     public function employees(){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $employees = Employee::all()->where('company_id', $companyId);
         $company = Company::select()->where('id', $companyId)->get();
@@ -235,6 +258,9 @@ class CompanyController extends Controller
     }
 
     public function employeeCreate(){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $company = Company::select()->where('id', $companyId)->get();
         $positions = Position::all()->where('company_id', $companyId);
@@ -243,6 +269,9 @@ class CompanyController extends Controller
     }
 
     public function employeeAdd(){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
 //        echo '<pre>';
 //       var_dump(request()->position);
@@ -270,6 +299,9 @@ class CompanyController extends Controller
     }
 
     public function employeeEdit($id){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
 //        dd($id);
         $companyId = Auth::guard('company')->user()->id;
         $company = Company::select()->where('id', $companyId)->get();
@@ -285,6 +317,9 @@ class CompanyController extends Controller
     }
 
     public function employeeUpdate($id){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $this->validate(
             request(), [
@@ -301,7 +336,7 @@ class CompanyController extends Controller
         $employee->egn = request('egn');
         $employee->salary = request('salary');
         $employee->email = request('email');
-        $employee->is_active = 1;
+//        $employee->is_active = 1;
         $employee->position_id = (int) request()->position;
 //        dd($employee);
         $employee->save();
@@ -309,6 +344,9 @@ class CompanyController extends Controller
     }
 
     public function employeeToggleBlock($id){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $employee = Employee::find($id);
         $employee->is_active = $employee->is_active === 1 ? 0 : 1;
@@ -318,6 +356,9 @@ class CompanyController extends Controller
     }
 
     public function employeeDelete($id){
+        if(Auth::guard('company')->user() === null){
+            return redirect('/');
+        }
         $companyId = Auth::guard('company')->user()->id;
         $employee = Employee::find($id);
         $employee->delete();
