@@ -4,7 +4,7 @@
         <main role="main">
             <section>
                 <h2>Positions</h2>
-                    <a href="/company/position-create" class="add-article">
+                    <a href="/company/position-create" class="btn btn-light font-weight-bold">
                         Add new position
                     </a>
 {{--                @dd($positions);--}}
@@ -16,6 +16,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -26,9 +27,9 @@
                                     {{$position->name}}
                                 </td>
                                 <td>{{$position->description}}</td>
-                                    <td style="text-align: center; color: red">
+                                    <td>
                                         <a href="/company/position-edit/{{$position->id }}" class="btn btn-primary">Edit</a>
-                                        <form action="/company/position-delete/{{$position->id }}" method="post">
+                                        <form action="/company/position-delete/{{$position->id }}" method="post" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger" type="submit">Delete</button>

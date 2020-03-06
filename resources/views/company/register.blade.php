@@ -10,17 +10,17 @@
             <form action="/company/register" method="post" autocomplete="off">
                 @csrf
                 <input class="text" type="text" name="bulstat" value="{{old('bulstat')}}" placeholder="Bulstat" required="">
-                @error('bulstat') {{$message}} @enderror
+                <small class="register-error">@error('bulstat') {{$message}} @enderror</small>
                 <input class="text" type="text" name="name" value="{{old('name')}}" placeholder="Company name" required="">
-                @error('name') {{$message}} @enderror
+                <small class="register-error"> @error('name') {{$message}} @enderror</small>
                 <input class="text" type="text" name="manager" value="{{old('manager')}}" placeholder="Manager" required="">
-                @error('manager') {{$message}} @enderror
+                <small class="register-error">@error('manager') {{$message}} @enderror</small>
                 <input class="text email" type="email" name="email" value="{{old('email')}}" placeholder="Email" required="" autocomplete="off">
-                @error('email') {{$message}} @enderror
+                <small class="register-error">@error('email') {{$message}} @enderror</small>
                 <input class="text" type="password" name="password" placeholder="Password" required="">
-                @error('password') {{$message}} @enderror
+                <small class="register-error">@error('password') {{$message}} @enderror</small>
                 <input class="text w3lpass" type="password" name="confirmPassword" placeholder="Confirm Password" required="">
-                @error('confirmPassword') {{$message}} @enderror
+                <small class="register-error">@error('confirmPassword') {{$message}} @enderror</small>
                 <input type="submit" value="SIGNUP">
             </form>
             <p>Don't have an Account? <a href="/company/login"> Login Now!</a></p>

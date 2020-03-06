@@ -7,7 +7,7 @@
             <h1 class="register-form-title">Login Form</h1>
             <form action="/company/login" method="post">
                 @if($errors->any())
-                    <div class="register-error">{{ implode('', $errors->all(':message')) }}</div>
+                    <small class="register-error">{{ implode('', $errors->all(':message')) }}</small>
                 @endif
                 @csrf
                 <input class="text email" type="email" name="email" placeholder="Email" required="">

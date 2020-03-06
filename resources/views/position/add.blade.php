@@ -3,25 +3,23 @@
 @section("company-content")
     <main role="main">
         <section>
-            <h2>Add Position</h2>
-            <form action="/company/position-add" method="post">
-                @if($errors->any())
-                    <div class="register-error">{{ implode('', $errors->all(':message')) }}</div>
-                @endif
-                @csrf
-{{--                <input class="text" type="text" name="name" placeholder="Position name" required="">--}}
-{{--                --}}{{--                @error('email') {{$message}} @enderror--}}
-{{--                <input class="text" type="text" name="description" placeholder="Position description" required="">--}}
-{{--                --}}{{--                @error('password') {{$message}} @enderror--}}
-                    <div class="add-article-field">
-                        <input class="text" type="text" name="name" placeholder="Position name" required="">
-                        {{--            {{Form::label('body','Описание')}}--}}
-                        {{--                <br>--}}
-                        {{--                {{Form::text('symptoms', '',['placeholder' => 'Симптоми на болестта.' ])}}--}}
+            <div class="container">
+                <h2>Add Position</h2>
+                <form action="/company/position-add" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <input class="text" type="text" name="name" placeholder="Position name" required=""
+                               value="{{old('name')}}">
+                        <small class="register-error">@error('name') {{$message}} @enderror</small>
                     </div>
-                    <textarea name="description"></textarea>
-                <input class="btn btn-secondary" type="submit" value="Submit">
-            </form>
+                    <div class="form-group">
+                        <textarea name="description"
+                                  placeholder="Position description">{{old('description')}}</textarea>
+                        <small class="register-error">@error('description') {{$message}} @enderror</small>
+                    </div>
+                    <button class="btn btn-light font-weight-bold" type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
 @endsection

@@ -11270,3 +11270,6 @@ a.text-dark:focus {
   }
 }
 
+.register-error{
+    color: red;
+}

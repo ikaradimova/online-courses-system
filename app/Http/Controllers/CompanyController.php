@@ -110,7 +110,7 @@ class CompanyController extends Controller
             'email' => request('email'),
             'password' => Hash::make(request('password')),
         ]);
-        return redirect('/company/index')->with('Status', 'Successful register');
+        return redirect('/company/login');
 //        return view('company.register');
 //        die('тест');
 //        return Company::create([
@@ -196,7 +196,7 @@ class CompanyController extends Controller
         $companyId = Auth::guard('company')->user()->id;
         $this->validate(
             request(), [
-                'name' => 'required|unique:positions',
+                'name' => 'required',
                 'description' => 'required'
             ]
         );
