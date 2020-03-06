@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use App\Position;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -144,18 +145,73 @@ class CompanyController extends Controller
     }
 
     public function positions(){
+        $companyId = Auth::guard('company')->user()->id;
+//        var_dump($companyId);die;
+//        $positions = Position::all();
+        $positions = Position::all()->where('company_id', $companyId);
+        $company = Company::select()->where('id', $companyId)->get();
+//        echo '<pre>';
+//        var_dump(count($positions));die;
+//        return view("position.index")->with('positions', $positions);
+//        return view("position.index",compact(['positions' => $positions /*, 'company' => $company[0]*/]));
+        return view("position.index")->with('positions', $positions)->with('company', $company[0]);
+//        return redirect('/company/index', compact($positions));
+    }
 
+    public function positionCreate(){
+        $companyId = Auth::guard('company')->user()->id;
+        $company = Company::select()->where('id', $companyId)->get();
+        return view("position.add")->with('company', $company[0]);
     }
 
     public function positionAdd(){
+        $companyId = Auth::guard('company')->user()->id;
+        $this->validate(
+            request(), [
+                'name' => 'required|unique:positions',
+                'description' => 'required',
 
+            ]
+        );
+        Position::create([
+            'name' => request('name'),
+            'description' => request('description'),
+            'company_id' => $companyId,
+        ]);
+        return redirect('/company/positions');
     }
 
-    public function positionEdit(){
-
+    public function positionEdit($id){
+//        dd($id);
+        $companyId = Auth::guard('company')->user()->id;
+        $company = Company::select()->where('id', $companyId)->get();
+        $position = Position::find($id);
+//        if(auth()->user()->id !== $recipe->user_id){
+//            return redirect("/")->with('error', "You are not authorized to perform that action");
+//        }else{
+        return view("position.edit")->with('position', $position)->with('company', $company[0]);
     }
 
-    public function positionDelete(){
+    public function positionUpdate($id){
+        $companyId = Auth::guard('company')->user()->id;
+        $this->validate(
+            request(), [
+                'name' => 'required|unique:positions',
+                'description' => 'required'
+            ]
+        );
+        $position = Position::find($id);
+        $position->name = request('name');
+        $position->description = request('description');
+        $position->company_id = $companyId;
+        $position->save();
+        return redirect('/company/positions')->with('Status', 'Successful');
+    }
 
+    public function positionDelete($id){
+        $companyId = Auth::guard('company')->user()->id;
+        $position = Position::find($id);
+        $position->delete();
+        return redirect('/company/positions')->with('Status', 'Successful');
     }
 }

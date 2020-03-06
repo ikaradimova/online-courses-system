@@ -26,6 +26,12 @@ Route::view('/company/login',  'company.login');
 Route::post('/company/login', 'CompanyController@login');
 //Route::view('/company/index', 'company.index');
 Route::get('/company/index', 'CompanyController@index');
+Route::get('/company/positions', 'CompanyController@positions');
+Route::get('/company/position-create', 'CompanyController@positionCreate');
+Route::post('/company/position-add', 'CompanyController@positionAdd');
+Route::get('/company/position-edit/{id}', 'CompanyController@positionEdit');
+Route::post('/company/position-update/{id}', 'CompanyController@positionUpdate');
+Route::delete('/company/position-delete/{id}', 'CompanyController@positionDelete');
 
 //Route::get('/company/register', function () {
 //    return view('company.register');
