@@ -33,6 +33,14 @@ Route::get('/company/position-edit/{id}', 'CompanyController@positionEdit');
 Route::post('/company/position-update/{id}', 'CompanyController@positionUpdate');
 Route::delete('/company/position-delete/{id}', 'CompanyController@positionDelete');
 
+Route::get('/company/employees', 'CompanyController@employees');
+Route::get('/company/employee-create', 'CompanyController@employeeCreate');
+Route::post('/company/employee-add', 'CompanyController@employeeAdd');
+Route::get('/company/employee-edit/{id}', 'CompanyController@employeeEdit');
+Route::post('/company/employee-update/{id}', 'CompanyController@employeeUpdate');
+Route::delete('/company/employee-delete/{id}', 'CompanyController@employeeDelete');
+Route::get('/company/employee-toggle-block/{id}', 'CompanyController@employeeToggleBlock');
+
 //Route::get('/company/register', function () {
 //    return view('company.register');
 //});

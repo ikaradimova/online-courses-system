@@ -7,7 +7,6 @@
                     <a href="/company/position-create" class="btn btn-light font-weight-bold">
                         Add new position
                     </a>
-{{--                @dd($positions);--}}
                 @if(count($positions) > 0)
 
                     <table class="table table-striped results">

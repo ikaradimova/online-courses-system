@@ -19,7 +19,6 @@ class CreateEmployeesTable extends Migration
             $table->string('lastname');
             $table->string('egn');
             $table->double('salary');
-            $table->timestamp('entry_date');
             $table->string('email')->unique();
             $table->tinyInteger('is_active')->default(1);
             $table->unsignedBigInteger('position_id');
