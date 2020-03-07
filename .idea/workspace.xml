@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c31eb80-5b45-4b4b-9304-b6c3d4d9daf5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/LoginTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/PositionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/RegisterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations-ready/2020_03_01_130028_create_companies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2013_03_01_130028_create_companies_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
@@ -123,13 +133,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\laravel\online-courses-system\database\migrations-ready" />
-      <recent name="D:\projects\laravel\online-courses-system\database\migrations" />
-      <recent name="D:\projects\laravel\online-courses-system\database" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\laravel\online-courses-system\resources\sass" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\laravel\online-courses-system\database\migrations" />
+      <recent name="D:\projects\laravel\online-courses-system\tests\Feature" />
+      <recent name="D:\projects\laravel\online-courses-system\database\migrations-ready" />
+      <recent name="D:\projects\laravel\online-courses-system\database" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -144,11 +155,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.PositionTest">
+    <configuration name="LoginTest.no_email_login" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LoginTest" file="$PROJECT_DIR$/tests/Feature/LoginTest.php" method="no_email_login" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PositionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PositionTest" file="$PROJECT_DIR$/tests/Feature/PositionTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PositionTest.empty_description_position_added" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PositionTest" file="$PROJECT_DIR$/tests/Feature/PositionTest.php" method="empty_description_position_added" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PositionTest.empty_name_position_added" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PositionTest" file="$PROJECT_DIR$/tests/Feature/PositionTest.php" method="empty_name_position_added" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PositionTest.successful_position_deleted" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PositionTest" file="$PROJECT_DIR$/tests/Feature/PositionTest.php" method="successful_position_deleted" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.PositionTest" />
+        <item itemvalue="PHPUnit.PositionTest.empty_name_position_added" />
+        <item itemvalue="PHPUnit.LoginTest.no_email_login" />
+        <item itemvalue="PHPUnit.PositionTest.empty_description_position_added" />
+        <item itemvalue="PHPUnit.PositionTest.successful_position_deleted" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -169,7 +209,8 @@
       <workItem from="1583343167424" duration="599000" />
       <workItem from="1583427127837" duration="17095000" />
       <workItem from="1583469796409" duration="5944000" />
-      <workItem from="1583511838943" duration="12046000" />
+      <workItem from="1583511838943" duration="13093000" />
+      <workItem from="1583553350450" duration="6159000" />
     </task>
     <servers />
   </component>

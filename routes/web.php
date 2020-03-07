@@ -18,14 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::resource('company', 'CompanyController');
-//Route::get('/company/register', 'CompanyController@register');
 Route::view('/company/register',  'company.register');
 Route::post('/company/register', 'CompanyController@register');
 Route::view('/company/login',  'company.login');
 Route::post('/company/login', 'CompanyController@login');
-//Route::view('/company/index', 'company.index');
 Route::get('/company/index', 'CompanyController@index');
+
+/** Position routes */
 Route::get('/company/positions', 'CompanyController@positions');
 Route::get('/company/position-create', 'CompanyController@positionCreate');
 Route::post('/company/position-add', 'CompanyController@positionAdd');
@@ -33,6 +32,7 @@ Route::get('/company/position-edit/{id}', 'CompanyController@positionEdit');
 Route::post('/company/position-update/{id}', 'CompanyController@positionUpdate');
 Route::delete('/company/position-delete/{id}', 'CompanyController@positionDelete');
 
+/** Company routes */
 Route::get('/company/employees', 'CompanyController@employees');
 Route::get('/company/employee-create', 'CompanyController@employeeCreate');
 Route::post('/company/employee-add', 'CompanyController@employeeAdd');
